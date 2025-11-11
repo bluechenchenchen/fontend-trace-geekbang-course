@@ -42,7 +42,7 @@
           new Promise((resolve, reject) => {
             reject('promise reject')
           })
-        promiseWrap().then((res) => {
+        promiseWrap().then(res => {
           console.log('res', res)
         })
       }
@@ -58,8 +58,8 @@
           headers: {
             'Content-Type': 'application/json'
           }
-        }).then((res) => {
-          res.text().then((res) => console.log('res', res))
+        }).then(res => {
+          res.text().then(res => console.log('res', res))
         })
       }
       function onClickNativeErrorFetch() {
@@ -71,10 +71,10 @@
             'Content-Type': 'application/json'
           }
         }).then(
-          (res) => {
-            res.text().then((res) => console.log('res', res))
+          res => {
+            res.text().then(res => console.log('res', res))
           },
-          (err) => {
+          err => {
             console.log('err', err)
           }
         )
@@ -85,7 +85,7 @@
         xhr.open('get', '/normal')
         xhr.setRequestHeader('content-type', 'application/json')
         xhr.send()
-        xhr.onreadystatechange = function () {
+        xhr.onreadystatechange = function() {
           if (xhr.readyState === 4) {
             console.log(xhr.responseText)
           }
@@ -96,7 +96,7 @@
         xhr.open('get', '/exception')
         xhr.setRequestHeader('content-type', 'application/json')
         xhr.send()
-        xhr.onreadystatechange = function () {
+        xhr.onreadystatechange = function() {
           if (xhr.readyState === 4) {
             console.log(xhr.responseText)
           }

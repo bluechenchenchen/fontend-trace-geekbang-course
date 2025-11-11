@@ -30,7 +30,7 @@ export enum TraceTypes {
   // 资源
   RESOURCE = 'Resource',
   // 动作、行为类型
-  ACTION = 'Action',
+  // ACTION = 'Action',
   // 请求类型
   FETCH = 'Fetch',
   // 代码错误
